@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     }
     
     private func randomNum () -> Int {
-        let num = Int(arc4random_uniform(101))
+        let num = Int(1 + arc4random_uniform(100))
         return num
     }
     

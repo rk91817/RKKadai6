@@ -11,9 +11,7 @@ class ViewController: UIViewController {
     @IBOutlet private weak var randomIntLabel: UILabel!
     @IBOutlet private weak var slider: UISlider!
     
-    @IBAction private func didTapButton(_ sender: Any) {
-        slider.minimumValue = 1
-        slider.maximumValue = 100
+    @IBAction func didTapButton(_ sender: Any) {
         let sliderValue: Int = Int(slider.value)
         let randomInt = Int(randomIntLabel.text ?? "0")
         if sliderValue == randomInt {
@@ -40,6 +38,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        slider.value = 50
         randomIntLabel.text = String(randomNum())
     }
 }
